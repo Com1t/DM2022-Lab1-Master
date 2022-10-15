@@ -32,7 +32,7 @@ def tokenize_text(text, remove_stopwords=False):
     """
     tokens = []
     for d in nltk.sent_tokenize(text, language='english'):
-        for word in nltk.word_tokenize(d, language='english'):
+        for word in nltk.word_tokenize(d, language='english', preserve_line=True):
             # filters here
             tokens.append(word)
     return tokens
